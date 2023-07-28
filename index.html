@@ -116,16 +116,40 @@
     <nav>
         <a href="https://github.com/FrownwithanF" target="_blank">Github</a>
         <a href="https://www.youtube.com/@frownwithanf" target="_blank">Watch me!</a>
+        <a href="https://frownwithanf.github.io/fun/">Fun</a>
     </nav>
     <div class="welcome-image">
         <img src="icon.jpg" alt="Site Icon">
     </div>
+    <div class="hero-section">
+        <h2>Welcome to my site</h2>
+        <p>If you have a video Idea or something, you can send one through here.</p>
+        <textarea id="idea-textbox" placeholder="Enter your idea here"></textarea>
+        <button onclick="sendMessage()">Send Idea</button>
+    </div>
+    <div class="about-me" id="about-me">
+        <h2>About Me</h2>
+        <p>FrownwithanF here, just some British kid.</p>
+    </div>
+    <div class="projects-section" id="projects">
+        <h2>Channel Teasers</h2>
+        <div class="project">
+            <h3>Nothing</h3>
+            <p>Sorry lol</p>
+        </div>
+    </div>
+    <div class="social-links" id="social-links">
+        <h2>Contacts</h2>
+        <a href="https://steamcommunity.com/profiles/76561199118473612/" class="social-icon" target="_blank"><i class="fab fa-steam"></i></a>
+        <a href="https://www.roblox.com/users/2463926477/profile" class="social-icon" target="_blank"><img src="roblox.png" alt="Roblox"></a>
+    </div>
+    
     <script>
         function sendMessage() {
             const webhookURL = "https://discord.com/api/webhooks/1134511009701314570/Vt4bIB8pE_eKL02N7JOZnqXlV9xoMUJAbwhQwrgbfo9OQIroPa1XeCycbkrzWtUnIl3R";
             const ideaTextbox = document.getElementById("idea-textbox");
             const ideaMessage = ideaTextbox.value;
-    
+
             // Send the message to the Discord bot via a POST request
             fetch(webhookURL, {
                 method: "POST",
@@ -149,25 +173,5 @@
             });
         }
     </script>
-    
-    <div class="hero-section">
-        <h2>Welcome to my site</h2>
-        <p>If you have a video Idea or something, you can send one through here.</p>
-        <textarea id="idea-textbox" placeholder="Enter your idea here"></textarea>
-        <button onclick="sendMessage()">Send Idea</button>
-    </div>
-    <div class="about-me" id="about-me">
-        <h2>About Me</h2>
-        <p>FrownwithanF here, just some British kid.</p>
-    </div>
-    <div class="projects-section" id="projects">
-        <h2>Channel Teasers</h2>
-        <div class="project">
-            <h3>Nothing</h3>
-            <p>Sorry lol</p>
-        </div>
-    </div>
-    <div class="social-links" id="social-links">
-        <h2>Contacts</h2>
-        <a href="https://steamcommunity.com/profiles/76561199118473612/" class="social-icon" target="_blank"><i class="fab fa-steam"></i></a>
-        <a href="https://www.roblox.com/users/2463926477/profile" class="social-icon" target="_blank"><img src="roblox.png" alt="Roblox"></
+</body>
+</html>
